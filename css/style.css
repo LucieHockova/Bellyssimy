@@ -6,17 +6,69 @@
   padding: 20px;
   color: rgb(77, 77, 77);
   border: 1px solid rgb(230, 229, 229);
-  background-color: rgb(247, 247, 241);
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 400px auto 30px;
+  grid-template-areas: "header" "main" "footer";
+}
+@media screen and (min-width: 700px) {
+  .body {
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 400px auto 30px;
+    grid-template-areas: "header header header" "left main right" "footer footer footer";
+  }
+}
+
+/*@media screen and ( min-width: 1000px ) {
+    grid-template-columns: 300px auto 300px;
+    grid-template-rows: 400px auto 30px;
+    grid-template-areas: 
+        "header header header"
+        "left main right"
+        "footer footer footer";
+}*/
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 .header {
   border: 1px solid rgb(230, 229, 229);
   height: 80%;
   width: auto;
-  /* background-image: url(/images/ai/skupinka1.png);*/
+  position: relative;
+  /*background-image: url(/images/ai/skupinka1.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;*/
+}
+
+header ::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: url(/images/ai/skupinka1.png);
+  background-position: center;
   background-size: 100%;
+  opacity: 0.05;
+  z-index: -1;
 }
 
 h1 {
@@ -32,7 +84,8 @@ ul {
 
 li {
   display: inline;
-  margin: 20px;
+  margin: 0;
+  font-weight: 600;
   padding: 10px;
 }
 
@@ -42,8 +95,7 @@ a {
 }
 
 a:hover {
-  color: red;
-  font-size: 23px;
+  color: rgb(113, 39, 217);
 }
 
 .nadpis {
@@ -57,7 +109,6 @@ a:hover {
 
 .institut:hover {
   color: rgb(254, 82, 191);
-  font-size: 23px;
 }
 
 .hurka {
@@ -66,7 +117,6 @@ a:hover {
 
 .hurka:hover {
   color: rgb(246, 98, 219);
-  font-size: 23px;
 }
 
 .strong {
@@ -89,10 +139,19 @@ a:hover {
   grid-template-rows: repeat(3, 400px);
 }
 
-footer {
+.pin {
+  width: 200px;
+}
+
+.left,
+.right {
+  width: 200px;
+}
+
+.footer {
   font-family: "Dancing Script", cursive;
   font-size: 20px;
   background-color: rgb(230, 229, 229);
   border: 1px solid 1px solid rgb(230, 229, 229);
-  margin-top: 500px;
+  /* margin-top: 500px;*/
 }/*# sourceMappingURL=style.css.map */

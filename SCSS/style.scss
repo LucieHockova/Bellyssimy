@@ -2,7 +2,7 @@ $primary-font: 'Montserrat', sans-serif;
 $secundary-font: 'Dancing Script', cursive;
 $border: 1px solid rgb(230, 229, 229);
 $color-text: rgb(77, 77, 77);
-$back-color: rgb(247, 247, 241);
+$back-color: white;
 $hover: 23px;
 
 
@@ -16,17 +16,60 @@ $hover: 23px;
     color: $color-text;
     border: $border;
     background-color: $back-color;
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 400px auto 30px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+
+@media screen and (min-width: 700px) {
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 400px auto 30px;
+    grid-template-areas: 
+        "header header header"
+        "left main right"
+        "footer footer footer";
+    }
 }
+/*@media screen and ( min-width: 1000px ) {
+    grid-template-columns: 300px auto 300px;
+    grid-template-rows: 400px auto 30px;
+    grid-template-areas: 
+        "header header header"
+        "left main right"
+        "footer footer footer";
+}*/
+
+.header {grid-area: header;}
+.main {grid-area: main;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+.footer {grid-area: footer;}
 
 .header {
     border: $border;
     height: 80%;
     width: auto;
-   /* background-image: url(/images/ai/skupinka1.png);*/
+    position: relative;
+    /*background-image: url(/images/ai/skupinka1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 100%;*/
+}
 
+header ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: url(/images/ai/skupinka1.png);
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.05;
+    z-index: -1;
 }
 
 h1 {
@@ -42,10 +85,11 @@ ul {
 
 li {
     display: inline;
-    margin: 20px;
-    padding: 10px;
-    
+    margin: 0;
+    font-weight: 600;
+    padding: 10px;  
 }
+
 
 a {
     text-decoration: none;
@@ -53,9 +97,7 @@ a {
 }
 
 a:hover {
-    color: red;
-    font-size: $hover;
-
+    color: rgb(113, 39, 217);
 }
 
 .nadpis {
@@ -69,7 +111,6 @@ a:hover {
 
 .institut:hover {
     color: rgb(254, 82, 191);
-    font-size: $hover;
 }
 
 .hurka {
@@ -78,7 +119,6 @@ a:hover {
 
 .hurka:hover {
     color: rgb(246, 98, 219);
-    font-size: $hover;
 }
 
 .strong {
@@ -101,13 +141,22 @@ a:hover {
     grid-template-rows: repeat(3, 400px);
 }
 
+.pin {
+    width: 200px;
+}
+
+.left,
+.right {
+    width: 200px;
+}
 
 
-footer {
+
+.footer {
     font-family: $secundary-font;
     font-size: 20px;
     background-color: rgb(230, 229, 229);
     border: 1px solid $border;
-    margin-top: 500px;
+   /* margin-top: 500px;*/
     
 }
