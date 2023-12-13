@@ -1,0 +1,98 @@
+.body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px;
+  color: rgb(77, 77, 77);
+  border: 1px solid rgb(230, 229, 229);
+  background-color: rgb(247, 247, 241);
+}
+
+.header {
+  border: 1px solid rgb(230, 229, 229);
+  height: 80%;
+  width: auto;
+  /* background-image: url(/images/ai/skupinka1.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+h1 {
+  color: red;
+  font-family: "Dancing Script", cursive;
+  font-size: 100px;
+  margin: 30px;
+}
+
+ul {
+  display: inline;
+}
+
+li {
+  display: inline;
+  margin: 20px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: red;
+  font-size: 23px;
+}
+
+.nadpis {
+  color: red;
+  font-family: "Dancing Script", cursive;
+}
+
+.institut {
+  color: rgb(252, 130, 207);
+}
+
+.institut:hover {
+  color: rgb(254, 82, 191);
+  font-size: 23px;
+}
+
+.hurka {
+  color: rgb(155, 81, 224);
+}
+
+.hurka:hover {
+  color: rgb(246, 98, 219);
+  font-size: 23px;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.foto-v {
+  width: 200px;
+  height: auto;
+}
+
+.foto-s {
+  width: 300px;
+  height: auto;
+}
+
+.fotogalerie {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(3, 400px);
+}
+
+footer {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  background-color: rgb(230, 229, 229);
+  border: 1px solid 1px solid rgb(230, 229, 229);
+  margin-top: 500px;
+}/*# sourceMappingURL=style.css.map */
