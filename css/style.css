@@ -5,21 +5,25 @@
   line-height: 1.5;
   padding: 20px;
   color: rgb(77, 77, 77);
-  border: 1px solid rgb(230, 229, 229);
+  /* border: $border;*/
   background-color: white;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 400px auto 30px;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px auto auto 30px;
+  grid-template-areas: "header header" "main main" "left right" "footer footer";
 }
+
+/* .left,
+  .right {
+      display: none;
+  }*/
 @media screen and (min-width: 700px) {
   .body {
     grid-template-columns: 200px auto 200px;
-    grid-template-rows: 400px auto 30px;
+    grid-template-rows: 300px auto 30px;
     grid-template-areas: "header header header" "left main right" "footer footer footer";
   }
 }
-
 /*@media screen and ( min-width: 1000px ) {
     grid-template-columns: 300px auto 300px;
     grid-template-rows: 400px auto 30px;
@@ -50,7 +54,7 @@
 
 .header {
   border: 1px solid rgb(230, 229, 229);
-  height: 80%;
+  height: 100%;
   width: auto;
   position: relative;
   /*background-image: url(/images/ai/skupinka1.png);
@@ -64,15 +68,17 @@ header ::before {
   display: block;
   position: absolute;
   inset: 0;
-  background: url(/images/ai/skupinka1.png);
+  background: url(/images/ai/skupinka_1.png);
   background-position: center;
   background-size: 100%;
-  opacity: 0.05;
+  background-repeat: no-repeat;
+  background-color: rgb(230, 229, 229);
+  opacity: 0.03;
   z-index: -1;
 }
 
 h1 {
-  color: red;
+  color: rgb(190, 3, 3);
   font-family: "Dancing Script", cursive;
   font-size: 100px;
   margin: 30px;
@@ -91,15 +97,38 @@ li {
 
 a {
   text-decoration: none;
-  color: red;
+  color: rgb(190, 3, 3);
 }
 
 a:hover {
-  color: rgb(113, 39, 217);
+  color: red;
+  /*rgb(113, 39, 217);*/
 }
 
+.main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* @media screen and (min-width: 700px) {
+    .uvod {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+        grid-template-rows: auto 30px;
+        grid-template-areas: 
+            "left text right"
+            "footer footer footer";
+    }
+    }
+
+.text {grid-area: text;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+.footer {grid-area: footer;}
+
+*/
 .nadpis {
-  color: red;
+  color: rgb(190, 3, 3);
   font-family: "Dancing Script", cursive;
 }
 
@@ -133,6 +162,10 @@ a:hover {
   height: auto;
 }
 
+/*.foto-s:active {
+    width: 600px;
+    height: auto;
+}*/
 .fotogalerie {
   display: grid;
   grid-template-columns: repeat(3, 400px);
@@ -141,17 +174,30 @@ a:hover {
 
 .pin {
   width: 200px;
+  padding-bottom: 250px;
+}
+
+.pinn {
+  width: 200px;
 }
 
 .left,
 .right {
   width: 200px;
+  height: auto;
+  padding-top: 250px;
+}
+
+.heslo {
+  color: rgb(190, 3, 3);
+  font-weight: 600;
 }
 
 .footer {
   font-family: "Dancing Script", cursive;
   font-size: 20px;
+  height: 30px;
   background-color: rgb(230, 229, 229);
-  border: 1px solid 1px solid rgb(230, 229, 229);
-  /* margin-top: 500px;*/
+  border: 1px solid rgb(230, 229, 229);
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */
